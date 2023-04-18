@@ -70,27 +70,29 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th scope="col"><?php echo $hotel[$key] ?></th>
-          <th scope="col"><?php echo $hotel[$key] ?></th>
-          <th scope="col"><?php echo $hotel[$key] ?></th>
-          <th scope="col"><?php echo $hotel[$key] ?></th>
+          <?php
+          foreach($hotels as $hotel){
+            foreach($hotel as $key => $value){
+              echo "<th scope='col'>". $key . "</th>";
+            }
+          }
+          ?>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row"><?php echo $hotel ['name'] ?></th>
-          <th scope="row"><?php echo $hotel ['description'] ?></th>
-          <th scope="row"><?php echo $hotel ['parking'] ?></th>
-          <th scope="row"><?php echo $hotel ['vote'] ?></th>
-          <th scope="row"><?php echo $hotel ['distance_to_center'] ?></th>
-        </tr>
-        <tr>
-          <th scope="row"><?php echo $hotel ['name'] ?></th>
-          <th scope="row"><?php echo $hotel ['description'] ?></th>
-          <th scope="row"><?php echo $hotel ['parking'] ?></th>
-          <th scope="row"><?php echo $hotel ['vote'] ?></th>
-          <th scope="row"><?php echo $hotel ['distance_to_center'] ?></th>
-        </tr>
+        <?php 
+        foreach($hotels as $hotel){
+          echo "<tr>".
+                  "<th scope='row'>" . $hotel ['name'] . "</th>".
+                  "<td>" . $hotel ['description'] . "</td>".
+                  "<td>" . $hotel ['parking'] . "</td>".
+                  "<td>" . $hotel ['vote'] . "</td>".
+                  "<td>" . $hotel ['distance_to_center'] . "</td>"
+                ."</tr>";
+        }
+        ?>
+       
+       
       </tbody>
     </table>
   </div>
