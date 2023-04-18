@@ -54,14 +54,14 @@
 
       ];
 
-      foreach($hotels as $hotel){
+      // foreach($hotels as $hotel){
 
-        foreach($hotel as $key => $value){
-          echo $key . ':' . ' ' . $value . '<br>';
-        }
+      //   foreach($hotel as $key => $value){
+      //     echo $key . ':' . ' ' . $value . '<br>';
+      //   }
 
-        echo '<hr>';
-      }
+      //   echo '<hr>';
+      // }
 
       
   ?>
