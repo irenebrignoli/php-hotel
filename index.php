@@ -67,14 +67,13 @@
   ?>
 
   <div class="container">
-    <table class="table table-striped">
+    <h1  class="text-center mt-5">Hotels</h1>
+    <table class="table table-striped table-bordered mt-5">
       <thead>
         <tr>
           <?php
-          foreach($hotels as $hotel){
-            foreach($hotel as $key => $value){
-              echo "<th scope='col'>". $key . "</th>";
-            }
+          foreach($hotels[0] as $key => $value){
+            echo "<th scope='col'>". $key . "</th>";  
           }
           ?>
         </tr>
@@ -82,6 +81,7 @@
       <tbody>
         <?php 
         foreach($hotels as $hotel){
+          
           echo "<tr>".
                   "<th scope='row'>" . $hotel ['name'] . "</th>".
                   "<td>" . $hotel ['description'] . "</td>".
