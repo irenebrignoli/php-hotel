@@ -68,6 +68,13 @@
 
   <div class="container">
     <h1  class="text-center mt-5">Hotels</h1>
+    <form action="index.php" method="get">
+      <label for="parking">Seleziona parcheggio:</label>
+      <select name="parking" id="parking">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </form>
     <table class="table table-striped table-bordered mt-5">
       <thead>
         <tr>
